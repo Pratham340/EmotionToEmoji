@@ -1,0 +1,3 @@
+https://teachablemachine.withgoogle.com/models/zV1KXrJrA/model.json
+decimal code for crying emoji-
+&#128557;

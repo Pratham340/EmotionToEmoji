@@ -1,0 +1,87 @@
+ 
+<html>
+  <head>
+    <title>Emotion To Emoji</title>
+    <link rel="icon" href="https://cdn4.iconfinder.com/data/icons/emoji-filled-line/32/emoji-icon-color-01-512.png" type="image/icon type">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<!-- Smartsupp Live Chat script -->
+<script type="text/javascript">
+  var _smartsupp = _smartsupp || {};
+  _smartsupp.key = '42531907fb33425900d8402a508b2235ef2177cf';
+  window.smartsupp||(function(d) {
+    var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+    s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+    c.type='text/javascript';c.charset='utf-8';c.async=true;
+    c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+  })(document);
+  </script>
+  <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+  <div class="container">
+  
+    <center>
+      <h3 class="btn btn-warning heading">Emotion To Emoji Web App
+        <br>
+        <span>&#128522;</span>
+        <span>&#128512;</span>
+        <span>&#128532;</span>
+        <span>&#128546;</span>
+        <span>&#128545;</span>
+        <span>&#128548;</span>
+      </h3>
+      <br><br>
+
+      <p style="font-size: 22px;">Take your selfie to generate emoji
+      	<br>
+        <b style="color: yellow">Are you Happy?</b>
+        <br>
+        <b style="color: black">Are you Sad?</b>
+        <br>
+        <b style="color: red">Are you Angry?</b>
+        <br>
+      </p>
+
+      <div class="col-md-4 col-sm-12 col-xs-12">
+	      <label>Snapshot - </label>
+        <div id="camera"></div>
+        <br><br>
+       <button onclick="take_snapshot();" class="btn btn-warning">Capture Face Image</button>
+      </div>
+      
+      <div class="col-md-4 col-sm-12 col-xs-12">
+        <label>Prediction 1-</label>
+        <p class="emotion_name" id="result_emotion_name"></p>
+        <p class="emoji" id="update_emoji"></p>
+
+        <label>Prediction 2-</label>
+        <p class="emotion_name" id="result_emotion_name2"></p>
+        <p class="emoji" id="update_emoji2"></p>
+      </div>
+      <div class="col-md-4 col-sm-12 col-xs-12">
+        <label>Captured Face Image</label>
+        <div id="result"></div>
+        <br><br>
+        <button class="btn btn-primary" onclick="check();">Predict Face image</button>
+      </div>
+    </center>
+
+  </div>
+  <script>
+    $(window).on("load",function(){
+      $(".loader-wrapper").fadeOut("slow");
+    });
+  </script>
+<script src="main.js"></script>
+
+  </body>
+</html>
+
+ 
